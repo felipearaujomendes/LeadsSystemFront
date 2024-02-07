@@ -1,0 +1,40 @@
+.mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+  
+  .mat-mdc-form-field {
+    margin-top: 16px;
+  }
+
+  .stepper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Opcional: ajuste a altura conforme necessário */
+  }
+  
+  /* Opcional: Estilize conforme necessário para adicionar espaço entre os steps */
+  .mat-horizontal-stepper-header-container {
+    justify-content: space-between;
+  }
+  
+  .mat-step-header {
+    flex: 1;
+  }
+
+  .custom-background {
+    background-color: #ededed; /* Altere para a cor desejada */
+    padding: 20px; /* Opcional: Adicione espaço interno conforme necessário */
+  }
+
+  .accept-button {
+    background-color: orange;
+    color: white;
+    margin-right: 8px; /* Adicione o espaço desejado à direita */
+  }
+  
+  .declined-button {
+    background-color: #f0f0f0;
+    color: black;
+    margin-right: 8px; /* Adicione o espaço desejado à direita */
+  }

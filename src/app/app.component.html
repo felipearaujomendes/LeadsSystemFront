@@ -1,0 +1,48 @@
+<mat-tab-group class="custom-background">
+  <mat-tab label="Invited">
+    <ng-container *ngFor="let record of leads">
+   <br>
+      <mat-card class="custom-card">
+        <mat-card-content>
+          <span style="font-weight: bold">{{ record.nome }}</span><br>
+          <i>{{ record.dateCreated }}</i><br>
+          <hr>
+          <mat-icon>location_on</mat-icon> {{ record.suburb }} | <mat-icon>work</mat-icon> {{ record.category }} | Job ID: {{ record.leadId }}<br>
+          <hr>
+          {{ record.description }}
+
+          <hr>
+          <button mat-button class="accept-button" (click)="acceptLead(record)">Accept</button>
+          <button mat-button class="declined-button" (click)="declinedLead(record.leadId)">Declined</button>
+          R$ <b>{{ record.price }} </b> Lead Invitation
+        </mat-card-content>
+      </mat-card>
+      <!-- Adicione uma quebra de linha após cada card -->
+      <br>
+    </ng-container>
+  </mat-tab>
+  <mat-tab label="Accepted">
+    <ng-container *ngFor="let record of leadsAccept">
+      <br>
+      <mat-card class="custom-card">
+        <mat-card-content>
+          <span style="font-weight: bold;">{{ record.nome }}</span><br>
+          <i>{{ record.dateCreated }}</i><br>
+          <hr>
+          <mat-icon>location_on</mat-icon> {{ record.suburb }} | 
+          <mat-icon>work</mat-icon> {{ record.category }} | 
+          Job ID: {{ record.leadId }} |  R$ <b>{{ record.price }} </b> Lead Invitation<br>
+          <hr>
+          <mat-icon>phone</mat-icon>
+          <span style="color: orange; font-weight: bold;"> {{ record.telefone }}</span>
+          <mat-icon>email</mat-icon>
+          <span style="color: orange; font-weight: bold;"> {{ record.email }}</span>
+          <hr>
+         {{ record.description }} 
+        </mat-card-content>
+      </mat-card>
+      <!-- Adicione uma quebra de linha após cada card -->
+      <br>
+    </ng-container>
+  </mat-tab>
+</mat-tab-group>
